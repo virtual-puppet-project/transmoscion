@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://bc10007qbvsxh"]
+
+[ext_resource type="Script" path="res://screens/transmission/receive-type/receive_type.gd" id="1_36ysl"]
+
+[node name="ReceiveType" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_36ysl")
+
+[node name="MenuButton" type="MenuButton" parent="."]
+layout_mode = 2
+offset_right = 1600.0
+offset_bottom = 46.0
+text = "None"
+
+[node name="Items" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_top = 52.0
+offset_right = 1600.0
+offset_bottom = 52.0
+
+[node name="Address" type="VBoxContainer" parent="Items"]
+visible = false
+layout_mode = 2
+offset_right = 1600.0
+offset_bottom = 52.0
+size_flags_vertical = 3
+
+[node name="Addresses" type="VBoxContainer" parent="Items/Address"]
+layout_mode = 2
+offset_right = 1600.0
+
+[node name="AddAddress" type="Button" parent="Items/Address"]
+layout_mode = 2
+offset_top = 6.0
+offset_right = 1600.0
+offset_bottom = 52.0
+text = "+"
+
+[node name="File" type="VBoxContainer" parent="Items"]
+visible = false
+layout_mode = 2
+offset_right = 1600.0

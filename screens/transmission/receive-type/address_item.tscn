@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://waif3be2jwdt"]
+
+[ext_resource type="Script" path="res://screens/transmission/receive-type/address_item.gd" id="1_wegax"]
+
+[node name="Address" type="HBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wegax")
+
+[node name="IP" type="LineEdit" parent="."]
+offset_right = 750.0
+offset_bottom = 900.0
+size_flags_horizontal = 3
+placeholder_text = "IP"
+
+[node name="Port" type="LineEdit" parent="."]
+offset_left = 756.0
+offset_right = 1506.0
+offset_bottom = 900.0
+size_flags_horizontal = 3
+placeholder_text = "Port"
+
+[node name="Delete" type="Button" parent="."]
+offset_left = 1512.0
+offset_right = 1600.0
+offset_bottom = 900.0
+text = "Delete"

@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjqw2dpyfomyq"]
+
+[ext_resource type="Script" path="res://screens/transmission/transmission.gd" id="1_wgjwc"]
+[ext_resource type="PackedScene" uid="uid://bc10007qbvsxh" path="res://screens/transmission/receive-type/receive_type.tscn" id="2_0t7ab"]
+
+[node name="Transmission" type="VSplitContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+split_offset = 614
+script = ExtResource("1_wgjwc")
+
+[node name="Top" type="HSplitContainer" parent="."]
+offset_right = 1600.0
+offset_bottom = 614.0
+split_offset = 888
+
+[node name="Left" type="ScrollContainer" parent="Top"]
+offset_right = 888.0
+offset_bottom = 614.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Top/Left"]
+offset_right = 888.0
+offset_bottom = 114.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Top/Left/VBoxContainer"]
+offset_right = 888.0
+offset_bottom = 38.0
+text = "Receiving"
+horizontal_alignment = 1
+
+[node name="ReceiveType" parent="Top/Left/VBoxContainer" instance=ExtResource("2_0t7ab")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_top = 44.0
+offset_right = 888.0
+offset_bottom = 114.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Right" type="ScrollContainer" parent="Top"]
+offset_left = 906.0
+offset_right = 1600.0
+offset_bottom = 614.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Top/Right"]
+offset_right = 694.0
+offset_bottom = 38.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Top/Right/VBoxContainer"]
+offset_right = 694.0
+offset_bottom = 38.0
+text = "Sending"
+horizontal_alignment = 1
+
+[node name="Bot" type="HSplitContainer" parent="."]
+offset_top = 632.0
+offset_right = 1600.0
+offset_bottom = 900.0

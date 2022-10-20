@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://3ji2sg2ygj8u"]
+
+[ext_resource type="Script" path="res://screens/splash.gd" id="1_5eep2"]
+
+[node name="Splash" type="CanvasLayer"]
+script = ExtResource("1_5eep2")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Splash!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextScreenTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
